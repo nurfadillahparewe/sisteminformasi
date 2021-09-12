@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% set page_title = 'Lihat Mahasiswa' %}
+{% block _content %}
+
+<div class="display-1 mt-5">LIHAT DATA</div>
+
+<ul>
+    <li>Nama : <b>{{ user.Namata }}</b></li>
+    <li>Email : <b>{{ user.Emailta }}</b></li>
+    <li>NIM : <b>{{ user.NIMta }}</b></li>
+    <li>Jurusan : <b>{{ user.Jurusanta }}</b></li>
+</ul>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html"%}
+{% set page_title = 'Mahasiswa' %}
+
+{% block _content %}
+
+<div class="display-1 mt-5">DATA MAHASISWA DILLA CODING</div>
+
+
+<table class="table table-striped table-hover">
+    <tr class="px-4">
+        <style>
+            th{
+                text-align: center;
+                padding: auto;
+            }
+        </style>
+        <th>Nama</th>
+        <th>Email</th>
+        <th>NIM</th>
+        <th>Jurusan</th>
+        <th>Aksi</th>
+        
+    </tr>
+    
+    <!-- py menampilkan data -->
+    <!-- ppy menjalankan fungsi -->
+    
+    {% for m in mb %}
+    <tr>
+        <style>
+            td{
+                text-align: center;
+                padding: auto;
+            }
+        </style>
+        <td>{{m ['Namata']}}</td>
+        <td>{{m ['Emailta']}}</td>
+        <td>{{m ['NIMta']}}</td>
+        <td>{{m ['Jurusanta']}}</td>
+        <td>
+            <a href="/mahasiswa/ubah/{{m.id}}">Ubah</a>
+            <a href="/mahasiswa/lihat/{{m.id}}">Lihat</a>
+            <a href="/mahasiswa/hapus/{{m.id}}">Hapus</a>
+        </td> 
+    </tr>
+    
+    {% endfor %}
+    
+</table>
+
+{% endblock %}

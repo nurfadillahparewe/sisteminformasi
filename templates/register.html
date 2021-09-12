@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+
+{% block _content %}
+
+<div class="display-1 mt-5">HALO, SILAHKAN TAMBAH USER</div>
+
+<form action="{{url_for('register')}}" method="POST">
+
+    <div class="my-5">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password">
+        <label for="nomor" class="form-label">Nomor HP</label>
+        <input type="number" class="form-control" id="nomor" name="nomor_hp">
+        <input type="submit" class="mt-4" value="Tambah User">
+
+    </div>
+
+</form>
+
+{% endblock %}

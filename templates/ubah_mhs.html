@@ -1,0 +1,26 @@
+{% extends "base.html"%}
+
+{% block _content %}
+
+<h1>HALAMAN UBAH DATA MAHASISWA</h1>
+<form action="{{url_for ('ubah_mhs', uid=user.id)}}" method="POST">
+    <div class="my-5">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama" value="{{user.Namata}}" name="nama">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" value="{{user.Emailta}}" name="email">
+        <label for="nim" class="form-label">NIM</label>
+        <input type="number" class="form-control" id="nim" value="{{user.NIMta}}" name="nim">
+        <label for="jurusan" class="form-label">Jurusan</label>
+        <input type="text" class="form-control" id="jurusan" value="{{user.Jurusanta}}" name="jurusan">
+        <input type="submit" class="mt-4" value="Ubah">
+
+    </div>
+
+</form>
+    
+    
+    
+</form>
+
+{% endblock %}

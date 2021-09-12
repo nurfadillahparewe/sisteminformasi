@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+
+{% block _content %}
+
+
+<div class="display-1 mt-5">HALO LOGIN</div>
+
+<form action="{{ url_for('login') }}" method='post'>
+    <div class="form-group">
+        <label for="user">Masukkan Username Anda</label>
+        <input type="nama" class="form-control" id="user" name="usernameta" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="passwordta" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-5">Login</button>
+</form>
+
+
+{% endblock %}
