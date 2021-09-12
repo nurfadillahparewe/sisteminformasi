@@ -1,1 +1,1 @@
-web : gunicorn sisfo:app
+web: gunicorn sisfo:app
